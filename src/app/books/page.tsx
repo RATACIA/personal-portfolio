@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/Card";
 import { CardHeader } from "@/components/CardHeader";
+import Link from "next/link";
+import ArrowLeft from "@/assets/icons/arrow-down.svg";
 interface Book {
   id: number;
   title: string;
@@ -46,29 +48,47 @@ const Books = () => {
 
   return (
     <div>
-      <h1>Book List</h1>
+      <Link href="/">
+        <ArrowLeft />
+        <span>go back</span>
+      </Link>
+      <h1 className="text-3xl font-semibold text-center mt-4">Book List</h1>
       {books.map((book) => (
-        <div className="" key={book.id}>
-          <h2>{book.title}</h2>
-          <h3>{book.author}</h3>
-          <span>
-            {new Date(book.publish_date)
-              .toLocaleDateString("en-GB", {
-                day: "2-digit",
-                month: "long",
-                year: "numeric",
-              })
-              .replace(/,/g, "")}
-          </span>
-          <div>
-            <span>{book.author}</span>
-            <div className="">
+        <div key={book.id} className={`flex flex-col items-center space-y-6 `}>
+          <div
+            className={`border rounded-3xl shadow-lg overflow-hidden p-6 mt-5 flex flex-col md:flex-row md:items-center w-full md:w-3/4 lg:w-1/2 ${
+              book.is_favourite ? "border-2 border-yellow-400/50" : "border"
+            }`}
+          >
+            <div className="flex-shrink-0 relative">
               <Image
                 src={book.image_url}
-                alt="Book cover"
-                width={120}
-                height={80}
+                alt={`${book.title} cover`}
+                width={240}
+                height={320}
+                className="rounded-lg"
               />
+              {/* Add a favourite badge */}
+              {book.is_favourite && (
+                <div className="absolute top-2 right-2 bg-yellow-400 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                  Favourite
+                </div>
+              )}
+            </div>
+
+            <div className="ml-0 md:ml-6 flex-grow">
+              <h2 className="text-xl font-bold mb-2">{book.title}</h2>
+              <h3 className="text-md text-gray-700 mb-4">{book.author}</h3>
+              <span className="block text-sm text-gray-500 mb-4">
+                {new Date(book.publish_date)
+                  .toLocaleDateString("en-GB", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
+                  })
+                  .replace(/,/g, "")}
+              </span>
+              <p className="text-gray-600">{book.description}</p>
             </div>
           </div>
         </div>
