@@ -1,28 +1,33 @@
+"use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-// Define your Book interface here
+import { Card } from "@/components/Card";
+import { CardHeader } from "@/components/CardHeader";
 interface Book {
-  id: number; // Change to `string` if `id` is a string
+  id: number;
   title: string;
   author: string;
+  publish_date: string;
   description: string;
-  image_url?: string; // Use optional chaining if the image URL might not always be present
+  image_url?: string;
+  is_favourite: boolean;
 }
 
 const Books = () => {
-  const [books, setBooks] = useState<Book[]>([]); // Specify the state as an array of Book
+  const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null); // Specify error type
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const response = await fetch("https://your-api-url.com/api/books"); // Replace with your actual API URL
+        const response = await fetch(
+          "https://dev.sirina-shop.ro/my-api/index.php"
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch books");
         }
-        const data: Book[] = await response.json(); // Specify the data type here
+        const data: Book[] = await response.json();
         setBooks(data);
       } catch (error) {
         setError(
@@ -42,18 +47,32 @@ const Books = () => {
   return (
     <div>
       <h1>Book List</h1>
-      <ul>
-        {books.map((book) => (
-          <li key={book.id}>
-            <h2>{book.title}</h2>
-            <p>{book.author}</p>
-            <p>{book.description}</p>
-            {book.image_url && (
-              <Image src={book.image_url} alt={`${book.title} cover`} />
-            )}
-          </li>
-        ))}
-      </ul>
+      {books.map((book) => (
+        <div className="" key={book.id}>
+          <h2>{book.title}</h2>
+          <h3>{book.author}</h3>
+          <span>
+            {new Date(book.publish_date)
+              .toLocaleDateString("en-GB", {
+                day: "2-digit",
+                month: "long",
+                year: "numeric",
+              })
+              .replace(/,/g, "")}
+          </span>
+          <div>
+            <span>{book.author}</span>
+            <div className="">
+              <Image
+                src={book.image_url}
+                alt="Book cover"
+                width={120}
+                height={80}
+              />
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
