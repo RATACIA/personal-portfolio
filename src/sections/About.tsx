@@ -6,9 +6,16 @@ import Image from "next/image";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import Html5 from "@/assets/icons/html5.svg";
 import Css3 from "@/assets/icons/css3.svg";
+import tailWind from "@/assets/icons/tailwind-css.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import GitHub from "@/assets/icons/github.svg";
-import mapImage from "@/assets/images/map.png";
+import mySql from "@/assets/icons/mysql-original-wordmark.svg";
+import nextIcon from "@/assets/icons/next-js.svg";
+import nodeIcon from "@/assets/icons/nodejs.svg";
+import vueIcon from "@/assets/icons/vue.svg";
+import vuetifyIcon from "@/assets/icons/vuetify.svg";
+import phpIcon from "@/assets/icons/file-type-php.svg";
+import mapImage from "@/assets/images/map1.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
@@ -20,8 +27,15 @@ const toolboxItems = [
   { title: "JavaScript", iconType: JavaScriptIcon },
   { title: "HTML5", iconType: Html5 },
   { title: "CSS3", iconType: Css3 },
+  { title: "Tailwind", iconType: tailWind },
   { title: "React", iconType: ReactIcon },
+  { title: "MySql", iconType: mySql },
+  { title: "Next.js", iconType: nextIcon },
+  { title: "NodeJs", iconType: nodeIcon },
+  { title: "Vue3", iconType: vueIcon },
+  { title: "Vuetify", iconType: vuetifyIcon },
   { title: "GitHub", iconType: GitHub },
+  { title: "Php", iconType: phpIcon },
 ];
 
 const hobbies = [
