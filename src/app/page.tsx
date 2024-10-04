@@ -9,7 +9,7 @@ import { Footer } from "@/sections/Footer";
 
 export default function Home() {
   return (
-    <div>
+    <div className="scroll-smooth">
       <Header />
       <HeroSection />
       <ProjectsSection />
