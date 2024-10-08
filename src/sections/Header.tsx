@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 export const Header = () => {
-  const [activeSection, setActiveSection] = useState<string>("");
+  const [activeSection, setActiveSection] = useState<string>("home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,7 +12,12 @@ export const Header = () => {
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+        const sectionBottom = sectionTop + sectionHeight;
+
+        if (
+          window.scrollY >= sectionTop - sectionHeight / 3 &&
+          window.scrollY < sectionBottom
+        ) {
           const id = section.getAttribute("id");
           if (id) {
             currentSection = id;
