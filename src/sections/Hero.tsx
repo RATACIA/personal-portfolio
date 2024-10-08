@@ -121,9 +121,13 @@ export const HeroSection = () => {
               Building Exceptional User Experiences
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I create websites with exceptional user experiences by focusing on
-              intuitive design, seamless functionality, and user-centered
-              solutions that prioritize accessibility and engagement.
+              I am an aspiring web developer with a passion for creating
+              innovative and user-friendly web applications. Eager to expand my
+              knowledge and take on new challenges, I continuously strive to
+              improve my skills in front-end and back-end development. With a
+              strong foundation in technologies like HTML, CSS, JavaScript, and
+              frameworks like Vue.js and Nuxt.js, I am committed to delivering
+              engaging digital experiences.
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
