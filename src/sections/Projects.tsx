@@ -16,8 +16,7 @@ const portfolioProjects = [
       { title: "Comprehensive Profit Margin & Cost Calculator." },
       { title: "Product history with added functionality." },
       {
-        title:
-          "Currency convertor, AI voiceover for marketing videos and much more.",
+        title: "Created multiple ecom-related tools",
       },
     ],
     link: "https://ecom-calculator.netlify.app/",
@@ -36,15 +35,15 @@ const portfolioProjects = [
     image: fabRehab,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Personal Project",
+    year: "2024",
+    title: "Reading List Manager",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Secured by authentication" },
+      { title: "Implemented CRUD functionality" },
+      { title: "Friendly Design" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
+    link: "https://sebireadinglist.netlify.app/",
     image: aiStartupLandingPage,
   },
 ];
