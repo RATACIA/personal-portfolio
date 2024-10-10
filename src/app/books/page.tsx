@@ -49,8 +49,10 @@ const Books = () => {
   return (
     <div>
       <Link href="/" className="flex flex-row gap-3 px-3 py-3">
-        <ArrowLeft />
-        <span>go back</span>
+        <ArrowLeft className="size-9 text-emerald-300" />
+        <span className="font-serif text-3xl md:text-5xl text-center mt-6">
+          Go back
+        </span>
       </Link>
       <h1 className="text-3xl font-semibold text-center mt-4">Book List</h1>
       {books.map((book) => {
