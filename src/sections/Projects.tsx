@@ -4,7 +4,7 @@ import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
+import landingProductPageTemplate from "@/assets/images/productLandingPageTemplate.png";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 const portfolioProjects = [
@@ -19,7 +19,7 @@ const portfolioProjects = [
         title: "Created multiple ecom-related tools",
       },
     ],
-    link: "https://ecom-calculator.netlify.app/",
+    link: "https://ecom-tools.netlify.app",
     image: ecomTools,
   },
   {
@@ -45,6 +45,18 @@ const portfolioProjects = [
     ],
     link: "https://sebireadinglist.netlify.app/",
     image: aiStartupLandingPage,
+  },
+  {
+    company: "Personal Project",
+    year: "2024",
+    title: "Product landing page template",
+    results: [
+      { title: "Created a fully responsive web design" },
+      { title: `Followed the briefs's design requirements` },
+      { title: "Implemented front-end functionality" },
+    ],
+    link: "https://demo-product-page.netlify.app/",
+    image: landingProductPageTemplate,
   },
 ];
 
