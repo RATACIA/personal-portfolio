@@ -48,7 +48,7 @@ const Books = () => {
 
   return (
     <div>
-      <Link href="/" className="flex flex-row gap-3">
+      <Link href="/" className="flex flex-row gap-3 px-3 py-3">
         <ArrowLeft />
         <span>go back</span>
       </Link>
