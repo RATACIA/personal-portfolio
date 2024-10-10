@@ -1,6 +1,8 @@
 import ecomTools from "@/assets/images/ECOM TOOLS.png";
 import fabRehab from "@/assets/images/Untitled (95).png";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import bookManager from "@/assets/images/bookManager.png";
+
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -44,7 +46,7 @@ const portfolioProjects = [
       { title: "Friendly Design" },
     ],
     link: "https://sebireadinglist.netlify.app/",
-    image: aiStartupLandingPage,
+    image: bookManager,
   },
   {
     company: "Personal Project",
