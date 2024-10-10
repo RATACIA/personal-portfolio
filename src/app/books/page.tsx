@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import ArrowLeft from "@/assets/icons/arrow-down.svg";
+import ArrowLeft from "@/assets/icons/left-arrow.svg";
 
 interface Book {
   id: number;
@@ -48,7 +48,7 @@ const Books = () => {
 
   return (
     <div>
-      <Link href="/">
+      <Link href="/" className="flex flex-row gap-3">
         <ArrowLeft />
         <span>go back</span>
       </Link>
