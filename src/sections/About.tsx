@@ -17,6 +17,8 @@ import vuetifyIcon from "@/assets/icons/vuetify.svg";
 import phpIcon from "@/assets/icons/file-type-php.svg";
 import mapImage from "@/assets/images/map1.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+import laravel from "@/assets/icons/laravel-svgrepo-com.svg";
+import docker from "@/assets/icons/docker-svgrepo-com.svg";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
@@ -36,9 +38,12 @@ const toolboxItems = [
   { title: "Vuetify", iconType: vuetifyIcon },
   { title: "GitHub", iconType: GitHub },
   { title: "Php", iconType: phpIcon },
+  { title: "Docker", iconType: docker },
+  { title: "Laravel", iconType: laravel },
 ];
 
 const hobbies = [
+  { title: "Coding", emoji: "👨🏻‍💻", left: "20%", top: "35%" },
   { title: "Painting", emoji: "🎨", left: "5%", top: "5%" },
   { title: "Photography", emoji: "📷", left: "50%", top: "5%" },
   { title: "Gaming", emoji: "🎮", left: "44%", top: "35%" },
