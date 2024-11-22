@@ -1,6 +1,7 @@
 import ecomTools from "@/assets/images/ECOM TOOLS.png";
 import fabRehab from "@/assets/images/Untitled (95).png";
 import bookManager from "@/assets/images/bookManager.png";
+import nodeapp from "@/assets/images/nodeapp.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -33,6 +34,18 @@ const portfolioProjects = [
     ],
     link: "https://fab-rehab.netlify.app/",
     image: fabRehab,
+  },
+  {
+    company: "Personal Project",
+    year: "2024",
+    title: "Blog app",
+    results: [
+      { title: "Secured by authentication" },
+      { title: "Implemented CRUD functionality" },
+      { title: "Modern design" },
+    ],
+    link: "https://blog.sirina-shop.ro/?page=2",
+    image: nodeapp,
   },
   {
     company: "Personal Project",
